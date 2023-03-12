@@ -1,9 +1,5 @@
 #!/usr/bin/python3
 """Starts a Flask web application.
-<<<<<<< HEAD
-=======
-
->>>>>>> 1416be8616e3cb85b3a68e38ec35dcd2cfb9fb0a
 The application listens on 0.0.0.0, port 5000.
 Routes:
     /: Displays 'Hello HBNB!'.
@@ -34,10 +30,6 @@ def hbnb():
 @app.route("/c/<text>", strict_slashes=False)
 def c(text):
     """Displays 'C' followed by the value of <text>
-<<<<<<< HEAD
-=======
-    
->>>>>>> 1416be8616e3cb85b3a68e38ec35dcd2cfb9fb0a
     Replaces any underscores in <text> with slashes.
     """
     text = text.replace("_", " ")
@@ -48,10 +40,6 @@ def c(text):
 @app.route("/python/<text>", strict_slashes=False)
 def python(text="is cool"):
     """Displays 'Python' followed by the value of <text>
-<<<<<<< HEAD
-=======
-    
->>>>>>> 1416be8616e3cb85b3a68e38ec35dcd2cfb9fb0a
     Replaces any underscores in <text> with slashes.
     """
     text = text.replace("_", " ")

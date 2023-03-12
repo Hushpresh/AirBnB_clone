@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-<<<<<<< HEAD
 """Starts a Flask web application.
 The application listens on 0.0.0.0, port 5000.
 Routes:
@@ -7,28 +6,10 @@ Routes:
 """
 from models import storage
 from flask import Flask
-=======
-
-"""Starts a Flask web application.
-
-The application listens on 0.0.0.0, port 5000.
-
-Routes:
-
-    /cities_by_states: HTML page with a list of all states and related cities.
-
-"""
-
-from models import storage
-
-from flask import Flask
-
->>>>>>> 1416be8616e3cb85b3a68e38ec35dcd2cfb9fb0a
 from flask import render_template
 
 app = Flask(__name__)
 
-<<<<<<< HEAD
 
 @app.route("/cities_by_states", strict_slashes=False)
 def cities_by_states():
@@ -46,31 +27,4 @@ def teardown(exc):
 
 
 if __name__ == "__main__":
-=======
-@app.route("/cities_by_states", strict_slashes=False)
-
-def cities_by_states():
-
-    """Displays an HTML page with a list of all states and related cities.
-
-    States/cities are sorted by name.
-
-
-    """
-
-    states = storage.all("State")
-
-    return render_template("8-cities_by_states.html", states=states)
-
-@app.teardown_appcontext
-
-def teardown(exc):
-
-    """Remove the current SQLAlchemy session."""
-
-    storage.close()
-
-if __name__ == "__main__":
-
->>>>>>> 1416be8616e3cb85b3a68e38ec35dcd2cfb9fb0a
     app.run(host="0.0.0.0")
